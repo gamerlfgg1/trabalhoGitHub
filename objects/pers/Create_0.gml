@@ -1,0 +1,1 @@
+global.pit = 0

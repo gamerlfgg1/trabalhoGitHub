@@ -1,0 +1,1 @@
+lt = room_speed * 0.01;
