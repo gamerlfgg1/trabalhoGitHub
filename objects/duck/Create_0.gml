@@ -1,5 +1,4 @@
 //deixar o pato aleatorio
-depth=0
 randomise();
 wv = 0.8
 wx = choose(1 ,-1)
