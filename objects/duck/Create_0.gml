@@ -1,3 +1,6 @@
+depth = 0
+
+global.pat = 1
 //deixar o pato aleatorio
 randomise();
 wv = 0.8

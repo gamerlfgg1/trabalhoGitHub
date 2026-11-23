@@ -1,4 +1,4 @@
-if (spt){
+if (spt) && global.pat = 0{
 
 //nao tenho a menor ideia do pq isso funciona mas funciona
 var ar = instance_find(grs, 0);

@@ -3,6 +3,9 @@ var ml = mouse_check_button_pressed(mb_left);
 var mr = mouse_check_button_pressed(mb_right);
 var pm = place_meeting(x, y, am);
 
+if global.pit <= 5{
+wv = wv + global.pit*0.0001;
+}else wv = wv + global.pit*0.00015;
 
 y -= my * wv;
 x += mx * wx * wv;
@@ -20,6 +23,7 @@ sprite_index = spr_duckwh
 //verifica se foi atingido
 if ((ml || mr) && pm) {
     mt = true;
+	global.shot = 3;
 }
 
 if (mt) {
@@ -37,6 +41,10 @@ sprite_index = spr_duckhit
 		if (place_meeting(x, y, grs)) {
 		//pato depois de cair/morto
 			global.pit += 1;
+			global.pat = 0
+			
+		//segunda vez para garantir 3 chances
+			global.shot = 3;
 			instance_destroy();
 			instance_create_layer(x ,y ,layer ,dog)
 			}
